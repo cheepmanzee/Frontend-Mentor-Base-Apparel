@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  min-height: 80vh;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #FFFDFE;
+  background-image: url(img/hero-desktop.jpg), url(img/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 660px 850px, cover;
+  background-position: right top, center;
+  color: #ce9797;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  background-size: 100vh;
+}
+
+.main .header {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main .header .logo {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.main .header .logo:hover {
+  opacity: 0.8;
+}
+
+.main .mobile-pic {
+  display: none;
+}
+
+.main .offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 80vh;
+}
+
+.main .offer .offer__wrapper h1 {
+  font-size: 3.2rem;
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.main .offer .offer__wrapper h1 span {
+  color: #403A3A;
+  font-weight: 700;
+}
+
+.main .offer .offer__wrapper p {
+  width: 38%;
+  line-height: 1.5rem;
+  margin: 20px 0 30px;
+}
+
+.main .offer .offer__wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  position: relative;
+}
+
+.main .offer .offer__wrapper form input {
+  display: block;
+  width: 50%;
+  border: 1px solid #DACED0;
+  background-color: transparent;
+  padding: 10px 25px;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+          box-shadow: 0 0 0px 1000px white inset;
+}
+
+.main .offer .offer__wrapper form input::-webkit-input-placeholder {
+  color: #ce9797;
+  font-family: 'Josefin Sans';
+  color: #E8DADA;
+}
+
+.main .offer .offer__wrapper form input:-ms-input-placeholder {
+  color: #ce9797;
+  font-family: 'Josefin Sans';
+  color: #E8DADA;
+}
+
+.main .offer .offer__wrapper form input::-ms-input-placeholder {
+  color: #ce9797;
+  font-family: 'Josefin Sans';
+  color: #E8DADA;
+}
+
+.main .offer .offer__wrapper form input::placeholder {
+  color: #ce9797;
+  font-family: 'Josefin Sans';
+  color: #E8DADA;
+}
+
+.main .offer .offer__wrapper form .error {
+  border-color: red;
+}
+
+.main .offer .offer__wrapper form .error-sign {
+  opacity: 1 !important;
+}
+
+.main .offer .offer__wrapper form .error-icon {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: -8%;
+  width: 20px;
+  height: 20px;
+}
+
+.main .offer .offer__wrapper form button {
+  right: 26%;
+  position: absolute;
+  height: 39px;
+  padding: 0 32px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background: #fee9e8;
+  background: linear-gradient(142deg, #fee9e8 0%, #ef9796 98%);
+}
+
+.main .offer .offer__wrapper form button img {
+  display: block;
+  width: 12px;
+  height: 19px;
+}
+
+@media (max-width: 992px) {
+  body {
+    background: url(img/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body .main .mobile-pic {
+    display: block;
+    height: 200px;
+    text-align: center;
+    margin: 20px -15px;
+    background-image: url(img/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+  }
+  body .main .offer {
+    margin: 30px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: auto;
+    height: auto;
+  }
+  body .main .offer .offer__wrapper {
+    text-align: center;
+  }
+  body .main .offer .offer__wrapper p {
+    width: 90%;
+    margin: 20px auto;
+  }
+  body .main .offer .offer__wrapper form {
+    margin: 0 auto;
+    width: 40%;
+  }
+  body .main .offer .offer__wrapper form .error-icon {
+    left: -11%;
+  }
+  body .main .offer .offer__wrapper form input {
+    width: 100%;
+  }
+  body .main .offer .offer__wrapper form button {
+    right: -15%;
+  }
+}
+
+@media (max-width: 568px) {
+  body .main .offer .offer__wrapper h1 {
+    font-size: 2.5rem;
+  }
+  body .main .offer .offer__wrapper form {
+    width: 70%;
+  }
+  body .main .offer .offer__wrapper form .error-icon {
+    left: -13%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

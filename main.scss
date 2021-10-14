@@ -1,0 +1,192 @@
+@import 'nullstyle.scss';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+$textColor: hsl(0, 36%, 70%);
+body {
+    min-height: 80vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #FFFDFE;
+    background-image: url(img/hero-desktop.jpg), url(img/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 660px 850px, cover;
+    background-position: right top, center;
+    color: $textColor;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main {
+    background-size: 100vh;
+    .header {
+        height: 80px;
+        display: flex;
+        align-items: flex-end;
+        .logo {
+            transition: 0.3s ease;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    .mobile-pic {
+        display: none;
+    }
+    .offer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 80vh;
+        .offer__wrapper {
+            h1 {
+                font-size: 3.2rem;
+                letter-spacing: 0.8rem;
+                text-transform: uppercase;
+                font-weight: 200;
+                line-height: 1;
+                span {
+                    color: #403A3A;
+                    font-weight: 700;
+                }
+            }
+            p {
+                width: 38%;
+                line-height: 1.5rem;
+                margin: 20px 0 30px;
+            }
+            form {
+                display: flex;
+                align-items: center;
+                width: 40%;
+                position: relative;
+                input {
+                    display: block;
+                    width: 50%;
+                    border: 1px solid #DACED0;
+                    background-color: transparent;
+                    padding: 10px 25px;
+                    border-right: none;
+                    border-radius: 20px 0 0 20px;
+                    outline: none;
+                    box-shadow: 0 0 0px 1000px white inset;
+                    &::placeholder {
+                        color: $textColor;
+                        font-family: 'Josefin Sans';
+                        color: #E8DADA;
+                    }
+                }
+                .error {
+                    border-color: red;
+                }
+                .error-sign {
+                    opacity: 1 !important;
+                }
+                .error-icon {
+                    opacity: 0;
+                    pointer-events: none;
+                    position: absolute;
+                    left: -8%;
+                    width: 20px;
+                    height: 20px;
+                }
+                button {
+                    right: 26%;
+                    position: absolute;
+                    height: 39px;
+                    padding: 0 32px;
+                    text-align: center;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    border: none;
+                    outline: none;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                    background: rgb(254,233,232);
+                    background: linear-gradient(142deg, rgba(254,233,232,1) 0%, rgba(239,151,150,1) 98%);
+                    img {
+                        display: block;
+                        width: 12px;
+                        height: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        background: url(img/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        .main {
+            .mobile-pic {
+                display: block;
+                height: 200px;
+                text-align: center;
+                margin: 20px -15px;
+                background-image: url(img/hero-mobile.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: bottom left;
+            }
+            .offer {
+                margin: 30px 0;
+                align-items: center;
+                min-height: auto;
+                height: auto;
+                .offer__wrapper {
+                    text-align: center;
+                    p {
+                        width: 90%;
+                        margin: 20px auto;
+                    }
+                    form {
+                        margin: 0 auto;
+                        width: 40%;
+                        .error-icon {
+                            left: -11%;
+                        }
+                        input {
+                            width: 100%;
+                        }
+                        button {
+                            right: -15%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 568px) {
+    body {
+        .main {
+            .offer {
+                .offer__wrapper {
+                    h1 {
+                        font-size: 2.5rem;
+                    }
+                    form {
+                        width: 70%;
+                        .error-icon {
+                            left: -13%;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
